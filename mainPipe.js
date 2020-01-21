@@ -10,7 +10,7 @@ const promiseGenerator = (pt, index) => {
       // .pipe(es.split())
       // .pipe(es.mapSync(l => console.log(l)))
       .pipe(ws)
-      .on("end", () => {
+      .on("close", () => {
         console.log("promise end!");
         const randomTime = Math.random() * 2000;
         setTimeout(() => resolve([index, randomTime]), randomTime);
