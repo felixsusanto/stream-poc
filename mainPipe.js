@@ -71,10 +71,16 @@ const mainPipe = () => {
       .pipe(dynamicPiping(arrOfStreamable, rs))
       .on("end", async () => {
         console.log("finished!");
-        const res = await Promise.all(arrOfStreamable.map(o => o.promise));
-        if (res) {
-          console.log(res);
-          resolve(res);
+        try {
+          const res = await Promise.all(arrOfStreamable.map(o => o.promise));
+        
+          if (res) {
+            // probably theres better way to check
+            console.log(res);
+            resolve(res);
+          }
+        } catch(e) {
+          reject(Error(e)):
         }
       })
       .on("error", (err) => {
