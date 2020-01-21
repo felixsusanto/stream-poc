@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "event-stream": "^4.0.1"
+    "event-stream": "^4.0.1",
+    "faker": "^4.1.0"
   }
 }
