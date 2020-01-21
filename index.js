@@ -1,3 +1,10 @@
-const fs = require("fs");
+const mainPipe = require("./mainPipe");
 
-fs.createReadStream("./bla");
+exports.handler = async function (event, context) {
+  try {
+    await mainPipe();
+    console.log("run here?");
+  } catch(e) {
+    throw Error(e);
+  }
+};

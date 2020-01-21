@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lambdarun": "nodemon test.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "event-stream": "^4.0.1",
-    "faker": "^4.1.0"
+    "faker": "^4.1.0",
+    "lodash": "^4.17.15",
+    "nodemon": "^2.0.2"
   }
 }

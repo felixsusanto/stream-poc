@@ -5,8 +5,8 @@ const faker = require('faker');
 const randomGenerator = () => {
   const obj = {
     name: faker.name.findName(),
-    email: faker.internet.email(),
-    card: faker.helpers.createCard()
+    email: faker.internet.email()
+    // card: faker.helpers.createCard()
   };
   return JSON.stringify(obj);
 };
